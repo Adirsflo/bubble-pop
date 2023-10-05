@@ -36,7 +36,6 @@ namespace BubblePop
 
                     button.Style = (Style)FindResource("RoundButtonStyle");
 
-                    GenerateRandomGreenButtons();
 
                 }
             }
@@ -44,6 +43,7 @@ namespace BubblePop
             {
                 _button.Click += Button_Click;
             }
+            GenerateRandomGreenButtons();
 
             StartGame();
         }
@@ -116,7 +116,7 @@ namespace BubblePop
         {
             TimeSpan elapsedTime = DateTime.Now - startTime;
             // Visa tiden på spelgränssnittet
-            timerLabel.Content = elapsedTime.ToString(@"mm\\:ss");
+            timerLabel.Content = elapsedTime.ToString(@"mm\:ss");
         }
 
         private void StartGame()
